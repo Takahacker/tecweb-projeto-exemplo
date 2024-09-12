@@ -76,15 +76,11 @@ WSGI_APPLICATION = 'editora.wsgi.application'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',  # Specify the database engine here
-        'NAME': dj_database_url.config(
-            default='',
-            conn_max_age=600,
-            ssl_require=not DEBUG
-        )['NAME'],
-        # ... other database settings ...
-    }
+    'default': dj_database_url.config(
+        default='postgresql://exemplo_livro_4hmd_user:afxdSoVadi85yLKUD7D3DslWTBljtJSO@dpg-crhed4dsvqrc738cjsmg-a.oregon-postgres.render.com/exemplo_livro_4hmd',
+        conn_max_age=600,
+        ssl_require=not DEBUG
+    )
 }
 
 
